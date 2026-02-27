@@ -1,3 +1,25 @@
+/* Custom color theme */
+:root {
+  --color-primary: #1db954;
+  --color-bg-main: #121212;
+  --color-bg-secondary: #212121;
+  --color-bg-tertiary: #535353;
+  --color-text-main: #b3b3b3;
+}
+
+body {
+  background: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+/* Utility classes for backgrounds and text */
+.bg-primary { background: var(--color-primary); }
+.bg-secondary { background: var(--color-bg-secondary); }
+.bg-tertiary { background: var(--color-bg-tertiary); }
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-bg-secondary); }
+.text-tertiary { color: var(--color-bg-tertiary); }
+.text-main { color: var(--color-text-main); }
 @import "tailwindcss";
 
 :root {

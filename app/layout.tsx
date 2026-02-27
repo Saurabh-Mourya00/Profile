@@ -24,9 +24,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`} 
+        style={{ 
+          background: "var(--color-bg-main)", 
+          color: "var(--color-text-main)", 
+          minHeight: "100vh" 
+        }}
       >
+        <nav style={{ 
+          display: "flex", 
+          justifyContent: "center", 
+          gap: 32, 
+          padding: "1.5rem 0", 
+          background: "var(--color-bg-secondary)", 
+          borderRadius: "0 0 1rem 1rem", 
+          marginBottom: 32 
+        }}>
+          <a href="/about" style={{ color: "var(--color-primary)", fontWeight: 600, textDecoration: "none" }}>About</a>
+          <a href="/project" style={{ color: "var(--color-primary)", fontWeight: 600, textDecoration: "none" }}>Project</a>
+          <a href="/education" style={{ color: "var(--color-primary)", fontWeight: 600, textDecoration: "none" }}>Education</a>
+          <a href="/blog" style={{ color: "var(--color-primary)", fontWeight: 600, textDecoration: "none" }}>Blog</a>
+        </nav>
         {children}
       </body>
     </html>
